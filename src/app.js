@@ -20,6 +20,30 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = "";
+  forecastHTML =
+    forecastHTML +
+    `
+    <div class="row">
+              <div class="col-2">
+                <div class="weather-forecast-date">Mon</div>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                  alt=""
+                  width="42"
+                />
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">18°</span> |
+                  <span class="weather-forecast-temperature-min">12°</span>
+                </div>
+              </div>
+            </div>
+            `;
+  forecastElement.innerHTML = forecastHTML;
+}
 function displayTemprature(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
@@ -86,3 +110,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Miami");
+displayForecast();
