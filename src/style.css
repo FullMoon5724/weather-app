@@ -1,10 +1,10 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   min-height: 100vh;
 }
 h1 {
-  color: #878787;
+  color: #5c5470;
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
@@ -18,7 +18,7 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: rgb(135, 135, 135);
+  color: #5c5470;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
@@ -87,4 +87,10 @@ li:first-letter {
 
 .btn {
   background-color: #5585b5;
+}
+
+img {
+  background-color: #c4c1e0;
+  border-radius: 50px;
+  border: 3px;
 }
